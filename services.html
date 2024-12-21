@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Topnotch Barbershop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
+    <style>
+        .services-carousel {
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 5rem; /* Add padding to prevent overlap with header */
+        }
+
+        .services-box {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .services-box img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin: 0 auto 2rem;
+        }
+
+        .services-box i {
+            font-size: 7rem;
+            color: var(--main-color);
+        }
+
+        .services-box h3 {
+            font-size: 2.6rem;
+            margin: 1rem 0;
+        }
+
+        .services-box p {
+            font-size: 1.6rem;
+            margin: 1rem 0 3rem;
+        }
+
+        .price-list {
+            width: 80%;
+            margin: 5rem auto;
+            padding: 2rem;
+            background: #f4f4f4;
+            border-radius: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-family: 'Great Vibes', cursive;
+            color: black;
+        }
+
+        .price-list h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .price-list h3 {
+            font-size: 2.4rem;
+            margin-top: 2rem;
+            text-align: left;
+        }
+
+        .price-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .price-list ul li {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+
+        .price-list ul li span {
+            font-weight: bold;
+        }
+
+        .price-list ul li .extra-info {
+            font-size: 1.2rem;
+            color: #666;
+            text-align: right;
+            width: 100%;
+        }
+        .services-carousel {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 5rem;
+}
+
+.services-box {
+    display: flex;
+    margin-bottom: 2rem;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-img {
+    flex: 1;
+    max-width: 50%;
+    overflow: hidden;
+}
+
+.service-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.service-description {
+    flex: 2;
+    padding: 1rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.service-description h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.service-description p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.service-description p.people,
+.service-description p.duration,
+.service-description p.price {
+    display: flex;
+    align-items: center;
+}
+
+.service-description p.people i,
+.service-description p.duration i,
+.service-description p.price i {
+    margin-right: 0.5rem;
+}
+
+.service-description .btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #26c6da;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.service-description .btn:hover {
+    background-color: #00796b;
+}
+
+@media (max-width: 768px) {
+            #menu-icon {
+            display: block;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            padding: 1rem 3%;
+            background: rgba(255, 255, 255, 0.9); /* Adjust the background color and opacity */
+            border-top: .1rem solid rgba(0, 0, 0, .2);
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+            display: none;
+        }
+
+        .navbar.active {
+            display: block;
+        }
+
+        .navbar a {
+            display: block;
+            font-size: 2rem;
+            margin: 3rem 0;
+        }
+    }
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Topnotch Barbershop</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="index.html#home">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="services">
+
+        <h2 class="heading">Our <span>Services</span></h2>
+
+        <div class="price-list">
+            <h2>Price List</h2>
+            <ul>
+                <h3>HAIRCUTS</h3>
+                <li><span>Men's Cut & Style</span> <span>$30</span></li>
+                <li><span>Senior's Cut</span> <span>$25</span></li>
+                <li><span>Kids' Cut (Under 12)</span> <span>$20</span></li>
+        
+                <h3>BEARD SERVICES</h3>
+                <li><span>Beard Trim</span> <span>$15</span></li>
+                <li><span>Beard Trim & Line-Up</span> <span>$20</span></li>
+                <li><span>Hot Towel Shave</span> <span>$30</span></li>
+                <li><span>Beard Sculpting</span> <span>$25</span></li>
+        
+                <h3>HAIR TREATMENTS</h3>
+                <li><span>Scalp Treatment</span> <span>$30</span></li>
+                <li><span>Grey Blending</span> <span>$40</span></li>
+                <li><span>Full Hair Color</span> <span>$50</span></li>
+        
+                <h3>SPECIAL PACKAGES</h3>
+                <li><span>The Classic (Cut & Beard Trim)</span> <span>$40</span></li>
+                <li><span>The Executive (Cut, Beard Trim & Hot Towel Shave)</span> <span>$60</span></li>
+                <li><span>Kids' Party (3 Kids Haircuts)</span> <span>$50</span></li>
+                <li class="extra-info" style="font-size: 1rem;">$15 per additional child</li>
+        
+                <h3>ADDITIONAL SERVICES</h3>
+                <li class="extra-info" style="font-size: 1rem;">Add-ons to any service</li>
+                <li><span>Eyebrow Shaping</span> <span>$10</span></li>
+                <li><span>Mustache Trim</span> <span>$10</span></li>
+                <li><span>Line-Up</span> <span>$15</span></li>
+                <li><span>Hair Wash</span> <span>$10</span></li>
+            </ul>
+        </div>
+        
+
+        
+    </section>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Shahdeen Rahman | All Rights Reserved. | <a href="admin-dashboard.html">Admin</a> | <a href="waiver.html">Waiver</a></p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.services-carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            });
+        });
+
+        // Toggle Navbar
+document.addEventListener('DOMContentLoaded', () => {
+    let menuIcon = document.querySelector('#menu-icon');
+    let navbar = document.querySelector('.navbar');
+
+    if (menuIcon && navbar) {
+        menuIcon.onclick = () => {
+            menuIcon.classList.toggle('bx-x');
+            navbar.classList.toggle('active');
+        };
+    }
+
+});
+
+    </script>
+</body>
+
+</html>

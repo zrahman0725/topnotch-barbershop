@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Topnotch Barbershop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        .about-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4rem;
+            padding: 5rem 0;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .about-img {
+            width: 50%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .about-text {
+            width: 50%;
+        }
+
+        .about-text h3 {
+            font-size: 2.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            font-size: 1.6rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-img,
+            .about-text {
+                width: 100%;
+            }
+
+            .about-text {
+                padding: 0 2rem;
+            }
+        }
+
+        .benefits-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            list-style-type: none;
+            padding: 0;
+        }
+        .benefits-list i {
+            font-size: 2rem; /* Adjust icon size */
+            color: #fff; /* Icon color */
+            background-color: #4d4d4d; /* Background color */
+            width: 60px; /* Circle width */
+            height: 60px; /* Circle height */
+            display: flex; /* Center the icon */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            border-radius: 50%; /* Make it a circle */
+            margin-bottom: 15px; /* Space below the icon */
+        }
+
+
+
+        .benefits-list li {
+            width: 8rem;
+            height: 8rem;
+            border-radius: 50%;
+            background: var(--second-bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.3s;
+            position: relative;
+        }
+
+        .benefits-list li img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .benefits-list .content {
+            display: none;
+            padding: 1rem;
+            background: var(--bg-color);
+            border-radius: 0.5rem;
+            position: absolute;
+            top: 10rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20rem;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 90%;
+            max-height: 80%;
+            overflow-y: auto;
+            text-align: center;
+            position: relative;
+            color: black;
+        }
+
+        .popup-content .close-button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        .popup-content #popup-title {
+            margin-top: 2rem;
+        }
+
+        .popup-content #popup-text {
+            margin-top: 1rem;
+        }
+        
+        .popup-content p {
+            font-size: 3rem; /* Adjust this value as needed */
+        }
+
+        @media (max-width: 768px) {
+            #menu-icon {
+            display: block;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            padding: 1rem 3%;
+            background: rgba(255, 255, 255, 0.9); /* Adjust the background color and opacity */
+            border-top: .1rem solid rgba(0, 0, 0, .2);
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+            display: none;
+        }
+
+        .navbar.active {
+            display: block;
+        }
+
+        .navbar a {
+            display: block;
+            font-size: 2rem;
+            margin: 3rem 0;
+        }
+    }
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Topnotch Barbershop</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="index.html#home">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-content" style="justify-content: center;">
+
+                <h2 class="heading">About <span>Us</span></h2>
+            </div>
+
+            <div class="about-content">
+                <h3>Our Benefits</h3>
+                <ul class="benefits-list">
+                    <li>
+                        <i class="fas fa-user-tie"></i>
+                        <div class="content">
+                            <h3>Professional Appearance</h3>
+                            <p>A well-groomed look enhances confidence and creates a positive impression. Regular visits to the barbershop keep your hair and beard styled to perfection, ensuring you always look your best.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-scissors"></i>
+                        <div class="content">
+                            <h3>Personalized Style</h3>
+                            <p>Barbers offer tailored cuts and styles to match your personality and preferences. From classic looks to modern trends, you can achieve a look that suits your lifestyle.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <div class="content">
+                            <h3>Self-Care</h3>
+                            <p>Taking time for a haircut or shave provides an opportunity for relaxation and self-care. The barbershop offers a welcoming space to unwind and recharge.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-shield-alt"></i>
+                        <div class="content">
+                            <h3>Hygiene and Health</h3>
+                            <p>Regular grooming promotes hygiene by keeping hair and skin clean and healthy. Barbers also provide scalp treatments that improve circulation and maintain hair health.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-magic"></i>
+                        <div class="content">
+                            <h3>Confidence Boost</h3>
+                            <p>A fresh cut and well-groomed beard can do wonders for your confidence. You leave the barbershop looking and feeling your best.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <div class="content">
+                            <h3>Time Efficiency</h3>
+                            <p>Visiting a barbershop saves time and ensures professional results. Barbers are skilled at delivering precise cuts and styles efficiently.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-users"></i>
+                        <div class="content">
+                            <h3>Community Connection</h3>
+                            <p>Barbershops are a hub for community and social interaction. Enjoy engaging conversations and a sense of camaraderie during your visit.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-lightbulb"></i>
+                        <div class="content">
+                            <h3>Expert Advice</h3>
+                            <p>Barbers provide expert advice on hair and beard care, recommending products and routines tailored to your needs. Their insights help you maintain your look between visits.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+
+
+            <div class="about-content" style="text-align: center;">
+                <img src="images/PP09_1600x.png" alt="Services Image" class="about-img" style="height: 350px;">
+                <div class="about-text">
+                    <h3>Our Signature Experience</h3>
+                    <p>At Topnotch Barbershop, we combine classic techniques with modern trends to provide an unmatched grooming experience. Our services are designed to enhance your confidence and style, whether it's a precision haircut, a relaxing hot towel shave, or expert beard styling. Step into our barbershop and enjoy a space that blends professionalism with a welcoming, relaxed atmosphere.</p>
+                </div>
+            </div>
+            
+            <div class="about-content" style="text-align: center;">
+                <div class="about-text">
+                    <h3>Our Philosophy</h3>
+                    <p>We believe that grooming is more than just a service; it's an essential part of self-care and confidence. At Topnotch Barbershop, we take the time to understand your personal style and grooming needs. From tailored haircuts to professional beard trims, we’re committed to delivering results that make you look and feel your best.</p>
+                </div>
+                <img src="images/philosophy.png" alt="Philosophy Image" class="about-img">
+            </div>
+            
+            <div class="about-content" style="text-align: center;">
+                <img src="images/services.png" alt="Services Image" class="about-img">
+                <div class="about-text">
+                    <h3>Our Services</h3>
+                    <p>Topnotch Barbershop offers a variety of grooming services, including precision haircuts, expert beard trims, hot towel shaves, and scalp treatments. Our skilled barbers use top-quality tools and products to ensure every service meets the highest standards. Whether you're looking for a new style or a quick clean-up, we have something for everyone.</p>
+                </div>
+            </div>
+            
+            <div class="about-content" style="text-align: center;">
+                <div class="about-text">
+                    <h3>Our Team</h3>
+                    <p>Our team of barbers is dedicated to their craft, combining years of experience with a passion for style and precision. As trusted professionals, we stay up-to-date with the latest grooming trends to ensure you receive the best possible service. Visit us to experience the skill and care that sets our barbers apart.</p>
+                </div>
+                <img src="images/team.png" alt="Team Image" class="about-img">
+            </div>
+            
+        </div>
+    </section>
+
+    <div id="popup-container" class="popup-container">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <h2 id="popup-title"></h2>
+            <div id="popup-text"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 by Shahdeen Rahman | All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.benefits-list li').forEach(item => {
+            item.addEventListener('click', () => {
+                const title = item.querySelector('.content h3').innerHTML;
+                const content = item.querySelector('.content p').innerHTML;
+                document.getElementById('popup-title').innerHTML = title;
+                document.getElementById('popup-text').innerHTML = content;
+                document.getElementById('popup-container').style.display = 'flex';
+            });
+        });
+
+        document.querySelector('.close-button').addEventListener('click', () => {
+            document.getElementById('popup-container').style.display = 'none';
+        });
+
+        document.getElementById('popup-container').addEventListener('click', (event) => {
+            if (event.target === document.getElementById('popup-container')) {
+                document.getElementById('popup-container').style.display = 'none';
+            }
+        });
+
+        // Toggle Navbar
+document.addEventListener('DOMContentLoaded', () => {
+    let menuIcon = document.querySelector('#menu-icon');
+    let navbar = document.querySelector('.navbar');
+
+    if (menuIcon && navbar) {
+        menuIcon.onclick = () => {
+            menuIcon.classList.toggle('bx-x');
+            navbar.classList.toggle('active');
+        };
+    }
+
+    // Other scripts...
+});
+
+        
+    </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
